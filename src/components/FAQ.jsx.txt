@@ -1,0 +1,25 @@
+import React from 'react';
+
+const faqs = [
+  { q: "Como funciona a adaptação?", a: "Fazemos um encontro inicial para conhecer o temperamento do seu pet e garantir que ele se sinta confortável." },
+  { q: "Posso enviar os alimentos?", a: "Sim! Recomendamos que mantenha a mesma ração para evitar mudanças bruscas na dieta." },
+  { q: "Como são as atualizações?", a: "Enviamos fotos e vídeos diários via WhatsApp para que você acompanhe a rotina de diversão." }
+];
+
+export default function FAQ() {
+  return (
+    <section className="py-24 px-6 bg-white">
+      <div className="max-w-3xl mx-auto">
+        <h2 className="text-4xl font-bold text-center mb-12">Perguntas Comuns</h2>
+        <div className="space-y-8">
+          {faqs.map((f, i) => (
+            <div key={i} className="border-b border-gray-100 pb-8">
+              <h4 className="text-lg font-bold mb-3 text-marrom">{f.q}</h4>
+              <p className="text-gray-600 leading-relaxed">{f.a}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}

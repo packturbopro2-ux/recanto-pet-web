@@ -1,0 +1,21 @@
+import React from 'react';
+import { motion } from 'framer-motion';
+
+const WA_LINK = "https://wa.me/5577981642913";
+
+export default function Hero() {
+  return (
+    <section className="py-24 px-6 flex flex-col items-center text-center bg-gradient-to-b from-white to-bege">
+      <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }} className="max-w-3xl">
+        <span className="text-verde font-semibold tracking-widest uppercase text-sm mb-4 block">Hospedagem & Creche Premium</span>
+        <h1 className="text-5xl md:text-7xl font-bold mb-8 text-marrom leading-tight">
+          Seu pet merece carinho e um lugar onde se sinta em casa.
+        </h1>
+        <p className="text-xl mb-10 text-gray-600">Viaje tranquilo sabendo que seu pet está seguro, feliz e sendo tratado com amor genuíno.</p>
+        <a href={WA_LINK} target="_blank" rel="noopener noreferrer" className="px-10 py-5 bg-verde text-white rounded-full font-bold hover:bg-marrom transition-all shadow-xl hover:scale-105 inline-block text-lg">
+          QUERO CUIDAR DO MEU PET
+        </a>
+      </motion.div>
+    </section>
+  );
+}
